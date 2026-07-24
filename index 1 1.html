@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mega Feirão dos Calçados</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f2f2f2;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.card{
+
+background:white;
+width:90%;
+max-width:420px;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+text-align:center;
+
+}
+
+.logo{
+
+font-size:30px;
+color:#d40000;
+font-weight:bold;
+
+}
+
+.loja{
+
+font-size:18px;
+margin-top:5px;
+color:#0066cc;
+
+}
+
+.nome{
+
+font-size:30px;
+margin:20px 0;
+color:#111;
+
+}
+
+.texto{
+
+font-size:18px;
+line-height:28px;
+margin-bottom:30px;
+
+}
+
+.botao{
+
+display:block;
+text-decoration:none;
+background:#0066cc;
+color:white;
+padding:18px;
+border-radius:12px;
+font-size:22px;
+font-weight:bold;
+
+}
+
+.botao:hover{
+
+background:#004b99;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="logo">
+MEGA FEIRÃO
+</div>
+
+<div class="loja">
+DOS CALÇADOS
+<br>
+Centro • Dourados/MS
+</div>
+
+<h1 class="nome" id="funcionario">
+Patricia
+</h1>
+
+<p class="texto">
+
+Obrigado por comprar conosco!
+
+Sua avaliação é muito importante.
+
+Se possível, escreva na avaliação que foi atendido por
+
+<b>Patricia</b>.
+
+</p>
+
+<a class="botao"
+href="https://search.google.com/local/writereview?placeid=ChIJDcvGiImpiZQRFl4WLnH69uA&source=g.page.m._&laa=merchant-review-solicitation">
+
+⭐ Avaliar Atendimento
+
+</a>
+<p style="margin-top:20px; font-size:15px; color:#666;">
+Sua opinião faz toda a diferença para continuarmos oferecendo um excelente atendimento.
+<br><br>
+❤️ Obrigado pela preferência!
+</p>  
+</div>
+
+<script>
+
+const nomes={
+
+
+Patricia:"Patricia",
+
+
+}
+
+const params=new URLSearchParams(window.location.search);
+
+const f=params.get("f");
+
+if(f && nomes[f.toLowerCase()]){
+
+document.getElementById("funcionario").innerHTML=nomes[f.toLowerCase()];
+
+document.getElementById("nome2").innerHTML=nomes[f.toLowerCase()];
+
+}
+
+</script>
+
+</body>
+</html>
