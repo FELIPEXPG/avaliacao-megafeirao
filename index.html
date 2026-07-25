@@ -99,7 +99,7 @@ Centro • Dourados/MS
 </div>
 
 <h1 class="nome" id="funcionario">
-Greice
+funcionario
 </h1>
 
 <p class="texto">
@@ -110,7 +110,7 @@ Sua avaliação é muito importante.
 
 Se possível, escreva na avaliação que foi atendido por
 
-<b>Greice</b>.
+<b id="nome2">Funcionário</b>
 
 </p>
 
@@ -128,28 +128,26 @@ Sua opinião faz toda a diferença para continuarmos oferecendo um excelente ate
 </div>
 
 <script>
+const nomes = {
+  felipe: "Felipe",
+  gislaine: "Gislaine",
+  greice: "Greice",
+  gleice: "Gleice",
+  patricia: "Patrícia",
+  veronica: "Verônica",
+  daiane: "Daiane"
+};
 
-const nomes={
+const params = new URLSearchParams(window.location.search);
+const f = params.get("f");
 
-
-greice:"Greice",
-
-
+if (f && nomes[f.toLowerCase()]) {
+  document.getElementById("funcionario").textContent = nomes[f.toLowerCase()];
+  document.getElementById("nome2").textContent = nomes[f.toLowerCase()];
+} else {
+  document.getElementById("funcionario").textContent = "Funcionário";
+  document.getElementById("nome2").textContent = "Funcionário";
 }
-
-const params=new URLSearchParams(window.location.search);
-
-const f=params.get("f");
-
-if(f && nomes[f.toLowerCase()]){
-
-document.getElementById("funcionario").innerHTML=nomes[f.toLowerCase()];
-
-document.getElementById("nome2").innerHTML=nomes[f.toLowerCase()];
-
-}
-
 </script>
-
 </body>
 </html>
